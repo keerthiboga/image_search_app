@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import SearchEmoji from './assets/searchEmoji.png'
-const ImageSearch = (props) => {
+const ImageSearch = () => {
   const [val,setval]=useState("");
   const [url,seturl]=useState("");
   let pageNo=Math.floor(Math.random()*10);
@@ -9,7 +9,7 @@ const ImageSearch = (props) => {
   {
     e.preventDefault();
     console.log(val);
-    const response=axios.get(`https://api.unsplash.com/search/photos?page=${pageNo}&query=${val}&client_id=${props.apikey}`);
+    const response=axios.get(`https://api.unsplash.com/search/photos?page=${pageNo}&query=${val}&client_id=C1IjvinZnUakROfWf4fZ16VqFlRJ3HsPlyavmYgta6I`);
     response.then(json=>seturl(json.data.results[Math.floor(Math.random()*10)].urls.small))
     .catch(err=>console.log("error occured: "+err));
     setval("");
