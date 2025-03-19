@@ -40,7 +40,7 @@ const ImageSearch = () => {
       </form>
       </div>
      <div >
-     {(lst.length>0)?<div className='w-auto h-auto border-none grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5'>
+     {(lst.length>0)?<div className='w-auto h-auto border-none grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 mx-2 my-4'>
      { lst.map((ele,idx)=>(
           <img key={idx} src={ele.urls.small} className='h-[400px] w-[350px] object-cover'></img>
         ))
