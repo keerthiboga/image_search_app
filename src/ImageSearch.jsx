@@ -14,7 +14,7 @@ const ImageSearch = () => {
    },[term])
   const fetchData=async (term)=>
   {
-    const response=await fetch(`https://api.unsplash.com/search/photos?page=${pageNo}&per_page=12&query=${term}&client_id=C1IjvinZnUakROfWf4fZ16VqFlRJ3HsPlyavmYgta6I`);
+    const response=await fetch(`https://api.unsplash.com/search/photos?page=${pageNo}&per_page=12&query=${term}&client_id=`);
     const jsonData=await response.json();
     const arr=(jsonData.results);
     const newlist=([...arr]);
