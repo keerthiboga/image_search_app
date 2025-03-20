@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react'
 // import axios from 'axios'
 import SearchEmoji from './assets/searchEmoji.png'
-const ImageSearch = () => {
+const ImageSearch = (props) => {
   const [val,setval]=useState("");
   const [lst,setlst]=useState([]);
   const [term,setSearchTerm]=useState("");
