@@ -13,12 +13,8 @@ const ImageSearch = () => {
     }
    },[term])
   const fetchData=async (term)=>
-  {
-<<<<<<< HEAD
+    {
     const response=await fetch(`https://api.unsplash.com/search/photos?page=${pageNo}&per_page=12&query=${term}&client_id=${props.apikey}`);
-=======
-    const response=await fetch(`https://api.unsplash.com/search/photos?page=${pageNo}&per_page=12&query=${term}&client_id=`);
->>>>>>> 09c77dc77206a297485b2acd8cf983445c2a8103
     const jsonData=await response.json();
     const arr=(jsonData.results);
     const newlist=([...arr]);
@@ -44,11 +40,7 @@ const ImageSearch = () => {
       </form>
       </div>
      <div >
-<<<<<<< HEAD
      {(lst.length>0)?<div className='w-auto h-auto border-none grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5'>
-=======
-     {(lst.length>0)?<div className='w-auto h-auto border-none grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 mx-2 my-4'>
->>>>>>> 09c77dc77206a297485b2acd8cf983445c2a8103
      { lst.map((ele,idx)=>(
           <img key={idx} src={ele.urls.small} className='h-[400px] w-[350px] object-cover'></img>
         ))
