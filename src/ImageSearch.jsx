@@ -14,7 +14,7 @@ const ImageSearch = (props) => {
    },[term])
   const fetchData=async (term)=>
     {
-    const response=await fetch(`https://api.unsplash.com/search/photos?page=${pageNo}&per_page=12&query=${term}&client_id=${props.apikey}`,{method:"POST"});
+    const response=await fetch(`https://api.unsplash.com/search/photos?page=${pageNo}&per_page=12&query=${term}&client_id=${props.apikey}`);
     const jsonData=await response.json();
     const arr=(jsonData.results);
     const newlist=([...arr]);
